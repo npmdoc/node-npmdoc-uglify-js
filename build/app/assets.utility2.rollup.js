@@ -514,7 +514,7 @@ local.templateApidocMd = '\
                     return element;
                 }
                 // init source
-                element.source = trimLeft(module[key].toString());
+                element.source = trimLeft(String(module[key]));
                 if (element.source.length > 4096) {
                     element.source = element.source.slice(0, 4096).trimRight() + ' ...';
                 }
