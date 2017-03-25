@@ -46,12 +46,12 @@
     font-weight: bold;
 }
 </style>
-<h1>api-documentation for
+<h1>api documentation for
     <a
 
         href="http://lisperator.net/uglifyjs"
 
-    >uglify-js (v2.8.14)</a>
+    >uglify-js (v2.8.16)</a>
 </h1>
 <h4>JavaScript parser, mangler/compressor and beautifier toolkit</h4>
 <div class="apidocSectionDiv"><a
@@ -13229,6 +13229,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.uglify-js.Compressor.prototype.info">
+            function <span class="apidocSignatureSpan">uglify-js.Compressor.prototype.</span>info
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.uglify-js.Compressor.prototype.option">
             function <span class="apidocSignatureSpan">uglify-js.Compressor.prototype.</span>option
             <span class="apidocSignatureSpan">(key)</span>
@@ -15794,6 +15803,7 @@ uglifyJS.<span class="apidocCodeKeywordSpan">minify</span>([ &#x22;input.js&#x22
         html5_comments : true,
         bare_returns   : false,
         shebang        : true,
+        cli            : false,
     });
 
     var S = {
@@ -15927,8 +15937,7 @@ uglifyJS.<span class="apidocCodeKeywordSpan">minify</span>([ &#x22;input.js&#x22
           case &#x22;num&#x22;:
           case &#x22;regexp&#x22;:
           case &#x22;operator&#x22;:
-          case &#x22;atom&#x22;:
-            return simple_statement(); ...</pre></li>
+          case &#x22;atom&#x22;: ...</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 ```
 
@@ -15973,7 +15982,7 @@ no sense otherwise).
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">readDefaultReservedFile = function (reserved) {
-    return readReservedFile(path.join(__dirname, &#x22;domprops.json&#x22;), reserved);
+    return readReservedFile(require.resolve(&#x22;./domprops.json&#x22;), reserved);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -16047,12 +16056,8 @@ no sense otherwise).
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function simple_glob(glob) {
-    var results = [];
     if (Array.isArray(glob)) {
-        glob.forEach(function(elem) {
-            results = results.concat(simple_glob(elem));
-        });
-        return results;
+        return [].concat.apply([], glob.map(simple_glob));
     }
     if (glob.match(/\*|\?/)) {
         var dir = path.dirname(glob);
@@ -16060,30 +16065,21 @@ no sense otherwise).
             var entries = fs.readdirSync(dir);
         } catch (ex) {}
         if (entries) {
-            var pattern = &#x22;^&#x22; + (path.basename(glob)
-                .replace(/\(/g, &#x22;\\(&#x22;)
-                .replace(/\)/g, &#x22;\\)&#x22;)
-                .replace(/\{/g, &#x22;\\{&#x22;)
-                .replace(/\}/g, &#x22;\\}&#x22;)
-                .replace(/\[/g, &#x22;\\[&#x22;)
-                .replace(/\]/g, &#x22;\\]&#x22;)
-                .replace(/\+/g, &#x22;\\+&#x22;)
-                .replace(/\^/g, &#x22;\\^&#x22;)
-                .replace(/\$/g, &#x22;\\$&#x22;)
+            var pattern = &#x22;^&#x22; + path.basename(glob)
+                .replace(/[.+^$[\]\\(){}]/g, &#x22;\\$&#x26;&#x22;)
                 .replace(/\*/g, &#x22;[^/\\\\]*&#x22;)
-                .replace(/\./g, &#x22;\\.&#x22;)
-                .replace(/\?/g, &#x22;.&#x22;)) + &#x22;$&#x22;;
+                .replace(/\?/g, &#x22;[^/\\\\]&#x22;) + &#x22;$&#x22;;
             var mod = process.platform === &#x22;win32&#x22; ? &#x22;i&#x22; : &#x22;&#x22;;
             var rx = new RegExp(pattern, mod);
-            for (var i in entries) {
-                if (rx.test(entries[i]))
-                    results.push(dir + &#x22;/&#x22; + entries[i]);
-            }
+            var results = entries.filter(function(name) {
+                return rx.test(name);
+            }).map(function(name) {
+                return path.join(dir, name);
+            });
+            if (results.length) return results;
         }
     }
-    if (results.length === 0)
-        results = [ glob ];
-    return results;
+    return [ glob ];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -22147,7 +22143,7 @@ return ast.<span class="apidocCodeKeywordSpan">transform</span>(new TreeTransfor
     output.print(&#x22;for&#x22;);
     output.space();
     output.with_parens(function(){
-        if (self.init &#x26;&#x26; !(self.init instanceof AST_EmptyStatement)) {
+        if (self.init) {
             if (self.init instanceof AST_Definitions) {
                 self.init.print(output);
             } else {
@@ -33985,6 +33981,23 @@ if (mangle) {
   uAST.mangle_names();
 }
 ...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.uglify-js.Compressor.prototype.info" id="apidoc.element.uglify-js.Compressor.prototype.info">
+        function <span class="apidocSignatureSpan">uglify-js.Compressor.prototype.</span>info
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">info = function () {
+    if (this.options.warnings == &#x22;verbose&#x22;) {
+        AST_Node.warn.apply(AST_Node, arguments);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
