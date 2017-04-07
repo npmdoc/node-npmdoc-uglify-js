@@ -51,7 +51,7 @@
 
         href="http://lisperator.net/uglifyjs"
 
-    >uglify-js (v2.8.16)</a>
+    >uglify-js (v2.8.21)</a>
 </h1>
 <h4>JavaScript parser, mangler/compressor and beautifier toolkit</h4>
 <div class="apidocSectionDiv"><a
@@ -3369,8 +3369,8 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.uglify-js.AST_Case.prototype.optimize">
-            function <span class="apidocSignatureSpan">uglify-js.AST_Case.prototype.</span>optimize
+            <a class="apidocElementLiA" href="#apidoc.element.uglify-js.AST_Case.prototype.has_side_effects">
+            function <span class="apidocSignatureSpan">uglify-js.AST_Case.prototype.</span>has_side_effects
             <span class="apidocSignatureSpan">(compressor)</span>
             </a>
 
@@ -6114,6 +6114,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.uglify-js.AST_If.prototype.has_side_effects">
+            function <span class="apidocSignatureSpan">uglify-js.AST_If.prototype.</span>has_side_effects
+            <span class="apidocSignatureSpan">(compressor)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.uglify-js.AST_If.prototype.optimize">
             function <span class="apidocSignatureSpan">uglify-js.AST_If.prototype.</span>optimize
             <span class="apidocSignatureSpan">(compressor)</span>
@@ -6215,15 +6224,6 @@
             <a class="apidocElementLiA" href="#apidoc.element.uglify-js.AST_Infinity.prototype.CTOR">
             function <span class="apidocSignatureSpan">uglify-js.AST_Infinity.prototype.</span>CTOR
             <span class="apidocSignatureSpan">(props)</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.uglify-js.AST_Infinity.prototype._codegen">
-            function <span class="apidocSignatureSpan">uglify-js.AST_Infinity.prototype.</span>_codegen
-            <span class="apidocSignatureSpan">(self, output)</span>
             </a>
 
         </li>
@@ -6800,6 +6800,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.uglify-js.AST_LabeledStatement.prototype.has_side_effects">
+            function <span class="apidocSignatureSpan">uglify-js.AST_LabeledStatement.prototype.</span>has_side_effects
+            <span class="apidocSignatureSpan">(compressor)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.uglify-js.AST_LabeledStatement.prototype.optimize">
             function <span class="apidocSignatureSpan">uglify-js.AST_LabeledStatement.prototype.</span>optimize
             <span class="apidocSignatureSpan">(compressor)</span>
@@ -7231,9 +7240,9 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.uglify-js.AST_NaN.prototype._codegen">
-            function <span class="apidocSignatureSpan">uglify-js.AST_NaN.prototype.</span>_codegen
-            <span class="apidocSignatureSpan">(self, output)</span>
+            <a class="apidocElementLiA" href="#apidoc.element.uglify-js.AST_NaN.prototype.optimize">
+            function <span class="apidocSignatureSpan">uglify-js.AST_NaN.prototype.</span>optimize
+            <span class="apidocSignatureSpan">(compressor)</span>
             </a>
 
         </li>
@@ -7787,7 +7796,7 @@
 
             <a class="apidocElementLiA" href="#apidoc.element.uglify-js.AST_Node.prototype.process_expression">
             function <span class="apidocSignatureSpan">uglify-js.AST_Node.prototype.</span>process_expression
-            <span class="apidocSignatureSpan">(insert)</span>
+            <span class="apidocSignatureSpan">(insert, compressor)</span>
             </a>
 
         </li>
@@ -9186,7 +9195,7 @@
 
             <a class="apidocElementLiA" href="#apidoc.element.uglify-js.AST_Scope.prototype.init_scope_vars">
             function <span class="apidocSignatureSpan">uglify-js.AST_Scope.prototype.</span>init_scope_vars
-            <span class="apidocSignatureSpan">()</span>
+            <span class="apidocSignatureSpan">(parent_scope)</span>
             </a>
 
         </li>
@@ -10286,6 +10295,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.uglify-js.AST_Switch.prototype.has_side_effects">
+            function <span class="apidocSignatureSpan">uglify-js.AST_Switch.prototype.</span>has_side_effects
+            <span class="apidocSignatureSpan">(compressor)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.uglify-js.AST_Switch.prototype.optimize">
             function <span class="apidocSignatureSpan">uglify-js.AST_Switch.prototype.</span>optimize
             <span class="apidocSignatureSpan">(compressor)</span>
@@ -10625,6 +10643,24 @@
             <a class="apidocElementLiA" href="#apidoc.element.uglify-js.AST_Symbol.prototype.global">
             function <span class="apidocSignatureSpan">uglify-js.AST_Symbol.prototype.</span>global
             <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.uglify-js.AST_Symbol.prototype.mark_enclosed">
+            function <span class="apidocSignatureSpan">uglify-js.AST_Symbol.prototype.</span>mark_enclosed
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.uglify-js.AST_Symbol.prototype.reference">
+            function <span class="apidocSignatureSpan">uglify-js.AST_Symbol.prototype.</span>reference
+            <span class="apidocSignatureSpan">(options)</span>
             </a>
 
         </li>
@@ -11410,15 +11446,6 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.uglify-js.AST_SymbolRef.prototype.reference">
-            function <span class="apidocSignatureSpan">uglify-js.AST_SymbolRef.prototype.</span>reference
-            <span class="apidocSignatureSpan">(options)</span>
-            </a>
-
-        </li>
-
-        <li>
-
             <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">uglify-js.AST_SymbolRef.prototype.</span>TYPE</span>
 
         </li>
@@ -12184,6 +12211,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.uglify-js.AST_Try.prototype.has_side_effects">
+            function <span class="apidocSignatureSpan">uglify-js.AST_Try.prototype.</span>has_side_effects
+            <span class="apidocSignatureSpan">(compressor)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.uglify-js.AST_Try.prototype.optimize">
             function <span class="apidocSignatureSpan">uglify-js.AST_Try.prototype.</span>optimize
             <span class="apidocSignatureSpan">(compressor)</span>
@@ -12697,24 +12733,6 @@
             <a class="apidocElementLiA" href="#apidoc.element.uglify-js.AST_Undefined.prototype.CTOR">
             function <span class="apidocSignatureSpan">uglify-js.AST_Undefined.prototype.</span>CTOR
             <span class="apidocSignatureSpan">(props)</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.uglify-js.AST_Undefined.prototype._codegen">
-            function <span class="apidocSignatureSpan">uglify-js.AST_Undefined.prototype.</span>_codegen
-            <span class="apidocSignatureSpan">(self, output)</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.uglify-js.AST_Undefined.prototype.needs_parens">
-            function <span class="apidocSignatureSpan">uglify-js.AST_Undefined.prototype.</span>needs_parens
-            <span class="apidocSignatureSpan">(output)</span>
             </a>
 
         </li>
@@ -14904,42 +14922,44 @@ this.operator = props.operator;}}</pre></li>
         return new Compressor(options, false_by_default);
     TreeTransformer.call(this, this.before, this.after);
     this.options = defaults(options, {
-        sequences     : !false_by_default,
-        properties    : !false_by_default,
+        angular       : false,
+        booleans      : !false_by_default,
+        cascade       : !false_by_default,
+        collapse_vars : !false_by_default,
+        comparisons   : !false_by_default,
+        conditionals  : !false_by_default,
         dead_code     : !false_by_default,
+        drop_console  : false,
         drop_debugger : !false_by_default,
+        evaluate      : !false_by_default,
+        expression    : false,
+        global_defs   : {},
+        hoist_funs    : !false_by_default,
+        hoist_vars    : false,
+        if_return     : !false_by_default,
+        join_vars     : !false_by_default,
+        keep_fargs    : true,
+        keep_fnames   : false,
+        keep_infinity : false,
+        loops         : !false_by_default,
+        negate_iife   : !false_by_default,
+        passes        : 1,
+        properties    : !false_by_default,
+        pure_getters  : false,
+        pure_funcs    : null,
+        reduce_vars   : !false_by_default,
+        screw_ie8     : true,
+        sequences     : !false_by_default,
+        side_effects  : !false_by_default,
+        switches      : !false_by_default,
+        top_retain    : null,
+        toplevel      : !!(options &#x26;&#x26; options[&#x22;top_retain&#x22;]),
         unsafe        : false,
         unsafe_comps  : false,
         unsafe_math   : false,
         unsafe_proto  : false,
-        conditionals  : !false_by_default,
-        comparisons   : !false_by_default,
-        evaluate      : !false_by_default,
-        booleans      : !false_by_default,
-        loops         : !false_by_default,
         unused        : !false_by_default,
-        toplevel      : !!(options &#x26;&#x26; options[&#x22;top_retain&#x22;]),
-        top_retain    : null,
-        hoist_funs    : !false_by_default,
-        keep_fargs    : true,
-        keep_fnames   : false,
-        hoist_vars    : false,
-        if_return     : !false_by_default,
-        join_vars     : !false_by_default,
-        collapse_vars : !false_by_default,
-        reduce_vars   : !false_by_default,
-        cascade       : !false_by_default,
-        side_effects  : !false_by_default,
-        pure_getters  : false,
-        pure_funcs    : null,
-        negate_iife   : !false_by_default,
-        screw_ie8     : true,
-        drop_console  : false,
-        angular       : false,
-        expression    : false,
         warnings      : true,
-        global_defs   : {},
-        passes        : 1,
     }, true);
     var pure_funcs = this.options[&#x22;pure_funcs&#x22;];
     if (typeof pure_funcs == &#x22;function&#x22;) {
@@ -15099,26 +15119,26 @@ if (mangle) {
     <li>description and source-code<pre class="apidocCodePre">function OutputStream(options) {
 
     options = defaults(options, {
-        indent_start     : 0,
-        indent_level     : 4,
-        quote_keys       : false,
-        space_colon      : true,
         ascii_only       : false,
-        unescape_regexps : false,
-        inline_script    : false,
-        width            : 80,
-        max_line_len     : false,
         beautify         : false,
-        source_map       : null,
         bracketize       : false,
-        semicolons       : true,
         comments         : false,
-        shebang          : true,
-        preserve_line    : false,
-        screw_ie8        : true,
-        preamble         : null,
-        quote_style      : 0,
+        indent_level     : 4,
+        indent_start     : 0,
+        inline_script    : false,
         keep_quoted_props: false,
+        max_line_len     : false,
+        preamble         : null,
+        preserve_line    : false,
+        quote_keys       : false,
+        quote_style      : 0,
+        screw_ie8        : true,
+        semicolons       : true,
+        shebang          : true,
+        source_map       : null,
+        space_colon      : true,
+        unescape_regexps : false,
+        width            : 80,
         wrap_iife        : false,
     }, true);
 
@@ -15486,12 +15506,12 @@ var code = stream.toString();
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function mangle_properties(ast, options) {
     options = defaults(options, {
-        reserved : null,
-        cache : null,
-        only_cache : false,
-        regex : null,
-        ignore_quoted : false,
-        debug : false
+        cache: null,
+        debug: false,
+        ignore_quoted: false,
+        only_cache: false,
+        regex: null,
+        reserved: null,
     });
 
     var reserved = options.reserved;
@@ -15613,7 +15633,7 @@ var code = stream.toString();
         var mangled = cache.props.get(name);
         if (!mangled) {
             if (debug) {
-                // debug mode: use a prefix and suffix to preserve readability, e ...</pre></li>
+                // debug mode: use a prefix and suffix to preserve readability, e.g. o ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -15648,21 +15668,21 @@ var code = stream.toString();
     <ul>
     <li>description and source-code<pre class="apidocCodePre">minify = function (files, options) {
     options = UglifyJS.defaults(options, {
-        spidermonkey     : false,
-        outSourceMap     : null,
-        outFileName      : null,
-        sourceRoot       : null,
-        inSourceMap      : null,
-        sourceMapUrl     : null,
-        sourceMapInline  : false,
+        compress         : {},
         fromString       : false,
-        warnings         : false,
+        inSourceMap      : null,
         mangle           : {},
         mangleProperties : false,
         nameCache        : null,
+        outFileName      : null,
         output           : null,
-        compress         : {},
-        parse            : {}
+        outSourceMap     : null,
+        parse            : {},
+        sourceMapInline  : false,
+        sourceMapUrl     : null,
+        sourceRoot       : null,
+        spidermonkey     : false,
+        warnings         : false,
     });
     UglifyJS.base54.reset();
 
@@ -15764,7 +15784,7 @@ null),
     toplevel.print(stream);
 
 
-    var source_map = output.source_ ...</pre></li>
+    var source_map = output.source ...</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 &#x3c;a name=&#x22;codegen-options&#x22;&#x3e;&#x3c;/a&#x3e;
 
@@ -15796,14 +15816,14 @@ uglifyJS.<span class="apidocCodeKeywordSpan">minify</span>([ &#x22;input.js&#x22
     <li>description and source-code<pre class="apidocCodePre">function parse($TEXT, options) {
 
     options = defaults(options, {
-        strict         : false,
-        filename       : null,
-        toplevel       : null,
-        expression     : false,
-        html5_comments : true,
         bare_returns   : false,
-        shebang        : true,
         cli            : false,
+        expression     : false,
+        filename       : null,
+        html5_comments : true,
+        shebang        : true,
+        strict         : false,
+        toplevel       : null,
     });
 
     var S = {
@@ -16765,10 +16785,7 @@ no sense otherwise).
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">has_side_effects = function (compressor){
-    for (var i = this.elements.length; --i &#x3e;= 0;)
-        if (this.elements[i].has_side_effects(compressor))
-            return true;
-    return false;
+    return any(this.elements, compressor);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -16999,7 +17016,8 @@ props.operator;this.left = props.left;}}</pre></li>
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">is_number = function (compressor){
-    return assign(this.operator) || this.right.is_number(compressor);
+    return binary(this.operator.slice(0, -1))
+        || this.operator == &#x22;=&#x22; &#x26;&#x26; this.right.is_number(compressor);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -17503,6 +17521,7 @@ props.operator;this.left = props.left;}}</pre></li>
     switch (this.operator) {
       case &#x22;&#x26;&#x26;&#x22;:
       case &#x22;||&#x22;:
+        if (right === this.right) return this;
         var node = this.clone();
         node.right = right;
         return node;
@@ -17975,11 +17994,7 @@ props.expression;}}</pre></li>
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">has_side_effects = function (compressor){
-    for (var i = this.body.length; --i &#x3e;= 0;) {
-        if (this.body[i].has_side_effects(compressor))
-            return true;
-    }
-    return false;
+    return any(this.body, compressor);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -18687,7 +18702,7 @@ for details.
         if (this.expression instanceof AST_Function
             &#x26;&#x26; (!this.expression.name || !this.expression.name.definition().references.length)) {
             var node = this.clone();
-            node.expression = node.expression.process_expression(false);
+            node.expression = node.expression.process_expression(false, compressor);
             return node;
         }
         return this;
@@ -18988,19 +19003,15 @@ return ast.<span class="apidocCodeKeywordSpan">transform</span>(new TreeTransfor
 
 
     <h2>
-        <a href="#apidoc.element.uglify-js.AST_Case.prototype.optimize" id="apidoc.element.uglify-js.AST_Case.prototype.optimize">
-        function <span class="apidocSignatureSpan">uglify-js.AST_Case.prototype.</span>optimize
+        <a href="#apidoc.element.uglify-js.AST_Case.prototype.has_side_effects" id="apidoc.element.uglify-js.AST_Case.prototype.has_side_effects">
+        function <span class="apidocSignatureSpan">uglify-js.AST_Case.prototype.</span>has_side_effects
         <span class="apidocSignatureSpan">(compressor)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">optimize = function (compressor){
-    var self = this;
-    if (self._optimized) return self;
-    if (compressor.has_directive(&#x22;use asm&#x22;)) return self;
-    var opt = optimizer(self, compressor);
-    opt._optimized = true;
-    return opt;
+    <li>description and source-code<pre class="apidocCodePre">has_side_effects = function (compressor){
+    return this.expression.has_side_effects(compressor)
+        || any(this.body, compressor);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -22961,6 +22972,23 @@ for details.
 
 
     <h2>
+        <a href="#apidoc.element.uglify-js.AST_If.prototype.has_side_effects" id="apidoc.element.uglify-js.AST_If.prototype.has_side_effects">
+        function <span class="apidocSignatureSpan">uglify-js.AST_If.prototype.</span>has_side_effects
+        <span class="apidocSignatureSpan">(compressor)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">has_side_effects = function (compressor){
+    return this.condition.has_side_effects(compressor)
+        || this.body &#x26;&#x26; this.body.has_side_effects(compressor)
+        || this.alternative &#x26;&#x26; this.alternative.has_side_effects(compressor);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
         <a href="#apidoc.element.uglify-js.AST_If.prototype.optimize" id="apidoc.element.uglify-js.AST_If.prototype.optimize">
         function <span class="apidocSignatureSpan">uglify-js.AST_If.prototype.</span>optimize
         <span class="apidocSignatureSpan">(compressor)</span>
@@ -23127,21 +23155,6 @@ return ast.<span class="apidocCodeKeywordSpan">transform</span>(new TreeTransfor
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function AST_Infinity(props){ if (props) { this.end = props.end;this.start = props.start;}}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.uglify-js.AST_Infinity.prototype._codegen" id="apidoc.element.uglify-js.AST_Infinity.prototype._codegen">
-        function <span class="apidocSignatureSpan">uglify-js.AST_Infinity.prototype.</span>_codegen
-        <span class="apidocSignatureSpan">(self, output)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">_codegen = function (self, output){
-    output.print(&#x22;Infinity&#x22;);
-}</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -23805,6 +23818,21 @@ props.name;this.scope = props.scope;}}</pre></li>
 
 
     <h2>
+        <a href="#apidoc.element.uglify-js.AST_LabeledStatement.prototype.has_side_effects" id="apidoc.element.uglify-js.AST_LabeledStatement.prototype.has_side_effects">
+        function <span class="apidocSignatureSpan">uglify-js.AST_LabeledStatement.prototype.</span>has_side_effects
+        <span class="apidocSignatureSpan">(compressor)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">has_side_effects = function (compressor){
+    return this.body.has_side_effects(compressor);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
         <a href="#apidoc.element.uglify-js.AST_LabeledStatement.prototype.optimize" id="apidoc.element.uglify-js.AST_LabeledStatement.prototype.optimize">
         function <span class="apidocSignatureSpan">uglify-js.AST_LabeledStatement.prototype.</span>optimize
         <span class="apidocSignatureSpan">(compressor)</span>
@@ -24146,10 +24174,11 @@ cname;this.enclosed = props.enclosed;this.parent_scope = props.parent_scope;this
     <li>description and source-code<pre class="apidocCodePre">init_scope_vars = function (){
     AST_Scope.prototype.init_scope_vars.apply(this, arguments);
     this.uses_arguments = false;
-
-    var symbol = new AST_VarDef({ name: &#x22;arguments&#x22;, start: this.start, end: this.end });
-    var def = new SymbolDef(this, this.variables.size(), symbol);
-    this.variables.set(symbol.name, def);
+    this.def_variable(new AST_SymbolVar({
+        name: &#x22;arguments&#x22;,
+        start: this.start,
+        end: this.end
+    }));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -24501,14 +24530,19 @@ return ast.<span class="apidocCodeKeywordSpan">transform</span>(new TreeTransfor
 
 
     <h2>
-        <a href="#apidoc.element.uglify-js.AST_NaN.prototype._codegen" id="apidoc.element.uglify-js.AST_NaN.prototype._codegen">
-        function <span class="apidocSignatureSpan">uglify-js.AST_NaN.prototype.</span>_codegen
-        <span class="apidocSignatureSpan">(self, output)</span>
+        <a href="#apidoc.element.uglify-js.AST_NaN.prototype.optimize" id="apidoc.element.uglify-js.AST_NaN.prototype.optimize">
+        function <span class="apidocSignatureSpan">uglify-js.AST_NaN.prototype.</span>optimize
+        <span class="apidocSignatureSpan">(compressor)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">_codegen = function (self, output){
-    output.print(&#x22;NaN&#x22;);
+    <li>description and source-code<pre class="apidocCodePre">optimize = function (compressor){
+    var self = this;
+    if (self._optimized) return self;
+    if (compressor.has_directive(&#x22;use asm&#x22;)) return self;
+    var opt = optimizer(self, compressor);
+    opt._optimized = true;
+    return opt;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -25125,8 +25159,8 @@ props.operator;this.left = props.left;}}</pre></li>
             }));
         }
 
-        if (comments.length &#x3e; 0 &#x26;&#x26; output.pos() == 0) {
-            if (output.option(&#x22;shebang&#x22;) &#x26;&#x26; comments[0].type == &#x22;comment5&#x22;) {
+        if (output.pos() == 0) {
+            if (comments.length &#x3e; 0 &#x26;&#x26; output.option(&#x22;shebang&#x22;) &#x26;&#x26; comments[0].type == &#x22;comment5&#x22;) {
                 output.print(&#x22;#!&#x22; + comments.shift().value + &#x22;\n&#x22;);
                 output.indent();
             }
@@ -25258,8 +25292,7 @@ props.operator;this.left = props.left;}}</pre></li>
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">equivalent_to = function (node){
-    // XXX: this is a rather expensive way to test two node&#x27;s equivalence:
-    return this.print_to_string() == node.print_to_string();
+    return this.TYPE == node.TYPE &#x26;&#x26; this.print_to_string() == node.print_to_string();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -25499,11 +25532,11 @@ which we care about here are `source_map` and `comments`.
     <h2>
         <a href="#apidoc.element.uglify-js.AST_Node.prototype.process_expression" id="apidoc.element.uglify-js.AST_Node.prototype.process_expression">
         function <span class="apidocSignatureSpan">uglify-js.AST_Node.prototype.</span>process_expression
-        <span class="apidocSignatureSpan">(insert)</span>
+        <span class="apidocSignatureSpan">(insert, compressor)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">process_expression = function (insert) {
+    <li>description and source-code<pre class="apidocCodePre">process_expression = function (insert, compressor) {
     var self = this;
     var tt = new TreeTransformer(function(node) {
         if (insert &#x26;&#x26; node instanceof AST_SimpleStatement) {
@@ -25512,8 +25545,19 @@ which we care about here are `source_map` and `comments`.
             });
         }
         if (!insert &#x26;&#x26; node instanceof AST_Return) {
+            if (compressor) {
+                var value = node.value &#x26;&#x26; node.value.drop_side_effect_free(compressor, true);
+                return value ? make_node(AST_SimpleStatement, node, {
+                    body: value
+                }) : make_node(AST_EmptyStatement, node);
+            }
             return make_node(AST_SimpleStatement, node, {
-                body: node.value || make_node(AST_Undefined, node)
+                body: node.value || make_node(AST_UnaryPrefix, node, {
+                    operator: &#x22;void&#x22;,
+                    expression: make_node(AST_Number, node, {
+                        value: 0
+                    })
+                })
             });
         }
         if (node instanceof AST_Lambda &#x26;&#x26; node !== self) {
@@ -25574,7 +25618,7 @@ which we care about here are `source_map` and `comments`.
             if (node instanceof AST_SymbolRef) {
                 var d = node.definition();
                 d.references.push(node);
-                if (!d.fixed || !is_safe(d)
+                if (d.fixed === undefined || !is_safe(d)
                     || is_modified(node, 0, d.fixed instanceof AST_Lambda)) {
                     d.fixed = false;
                 }
@@ -25584,10 +25628,10 @@ which we care about here are `source_map` and `comments`.
             }
             if (node instanceof AST_VarDef) {
                 var d = node.name.definition();
-                if (d.fixed === undefined) {
-                    d.fixed = node.value || make_node(AST_Undefined, node);
+                if (d.fixed == null) {
+                    d.fixed = node.value;
                     mark_as_safe(d);
-                } else {
+                } else if (node.value) {
                     d.fixed = false;
                 }
             }
@@ -25655,8 +25699,7 @@ which we care about here are `source_map` and `comments`.
                 pop();
                 return true;
             }
-            if (node instanceof AST_Catch) {
-                push() ...</pre></li>
+            if (node instanceof AST_Catch || node instanceof AST_SwitchBranch) ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -26188,10 +26231,7 @@ props.value;}}</pre></li>
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">has_side_effects = function (compressor){
-    for (var i = this.properties.length; --i &#x3e;= 0;)
-        if (this.properties[i].has_side_effects(compressor))
-            return true;
-    return false;
+    return any(this.properties, compressor);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -27811,18 +27851,19 @@ cname;this.enclosed = props.enclosed;this.parent_scope = props.parent_scope;this
     <h2>
         <a href="#apidoc.element.uglify-js.AST_Scope.prototype.init_scope_vars" id="apidoc.element.uglify-js.AST_Scope.prototype.init_scope_vars">
         function <span class="apidocSignatureSpan">uglify-js.AST_Scope.prototype.</span>init_scope_vars
-        <span class="apidocSignatureSpan">()</span>
+        <span class="apidocSignatureSpan">(parent_scope)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">init_scope_vars = function (){
-    this.variables = new Dictionary(); // map name to AST_SymbolVar (variables defined in this scope; includes functions)
-    this.functions = new Dictionary(); // map name to AST_SymbolDefun (functions defined in this scope)
-    this.uses_with = false;   // will be set to true if this or some nested scope uses the `with` statement
-    this.uses_eval = false;   // will be set to true if this or nested scope uses the global `eval`
-    this.parent_scope = null; // the parent scope
-    this.enclosed = [];       // a list of variables from this or outer scope(s) that are referenced from this or inner scopes
-    this.cname = -1;          // the current index for mangling functions/variables
+    <li>description and source-code<pre class="apidocCodePre">init_scope_vars = function (parent_scope){
+    this.variables = new Dictionary();  // map name to AST_SymbolVar (variables defined in this scope; includes functions)
+    this.functions = new Dictionary();  // map name to AST_SymbolDefun (functions defined in this scope)
+    this.uses_with = false;             // will be set to true if this or some nested scope uses the `with` statement
+    this.uses_eval = false;             // will be set to true if this or nested scope uses the global `eval`
+    this.parent_scope = parent_scope;   // the parent scope
+    this.enclosed = [];                 // a list of variables from this or outer scope(s) that are referenced from this or inner
+ scopes
+    this.cname = -1;                    // the current index for mangling functions/variables
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -29410,14 +29451,16 @@ props.expression;}}</pre></li>
         self.expression.print(output);
     });
     output.space();
-    if (self.body.length &#x3e; 0) output.with_block(function(){
-        self.body.forEach(function(stmt, i){
-            if (i) output.newline();
+    var last = self.body.length - 1;
+    if (last &#x3c; 0) output.print(&#x22;{}&#x22;);
+    else output.with_block(function(){
+        self.body.forEach(function(branch, i){
             output.indent(true);
-            stmt.print(output);
+            branch.print(output);
+            if (i &#x3c; last &#x26;&#x26; branch.body.length &#x3e; 0)
+                output.newline();
         });
     });
-    else output.print(&#x22;{}&#x22;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -29451,6 +29494,22 @@ props.expression;}}</pre></li>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">add_source_map = function (stream){
     generator(this, stream);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.uglify-js.AST_Switch.prototype.has_side_effects" id="apidoc.element.uglify-js.AST_Switch.prototype.has_side_effects">
+        function <span class="apidocSignatureSpan">uglify-js.AST_Switch.prototype.</span>has_side_effects
+        <span class="apidocSignatureSpan">(compressor)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">has_side_effects = function (compressor){
+    return this.expression.has_side_effects(compressor)
+        || any(this.body, compressor);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -29669,14 +29728,12 @@ return ast.<span class="apidocCodeKeywordSpan">transform</span>(new TreeTransfor
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_do_print_body = function (output){
-    if (this.body.length &#x3e; 0) {
+    output.newline();
+    this.body.forEach(function(stmt){
+        output.indent();
+        stmt.print(output);
         output.newline();
-        this.body.forEach(function(stmt){
-            output.indent();
-            stmt.print(output);
-            output.newline();
-        });
-    }
+    });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -29968,6 +30025,48 @@ props.name;this.scope = props.scope;}}</pre></li>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">global = function (){
     return this.definition().global;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.uglify-js.AST_Symbol.prototype.mark_enclosed" id="apidoc.element.uglify-js.AST_Symbol.prototype.mark_enclosed">
+        function <span class="apidocSignatureSpan">uglify-js.AST_Symbol.prototype.</span>mark_enclosed
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mark_enclosed = function (options) {
+    var def = this.definition();
+    var s = this.scope;
+    while (s) {
+        push_uniq(s.enclosed, def);
+        if (options.keep_fnames) {
+            s.functions.each(function(d) {
+                push_uniq(def.scope.enclosed, d);
+            });
+        }
+        if (s === def.scope) break;
+        s = s.parent_scope;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.uglify-js.AST_Symbol.prototype.reference" id="apidoc.element.uglify-js.AST_Symbol.prototype.reference">
+        function <span class="apidocSignatureSpan">uglify-js.AST_Symbol.prototype.</span>reference
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reference = function (options) {
+    this.definition().references.push(this);
+    this.mark_enclosed(options);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -30881,33 +30980,6 @@ props.name;this.scope = props.scope;}}</pre></li>
 
 
 
-    <h2>
-        <a href="#apidoc.element.uglify-js.AST_SymbolRef.prototype.reference" id="apidoc.element.uglify-js.AST_SymbolRef.prototype.reference">
-        function <span class="apidocSignatureSpan">uglify-js.AST_SymbolRef.prototype.</span>reference
-        <span class="apidocSignatureSpan">(options)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">reference = function (options) {
-    var def = this.definition();
-    def.references.push(this);
-    var s = this.scope;
-    while (s) {
-        push_uniq(s.enclosed, def);
-        if (options.keep_fnames) {
-            s.functions.each(function(d) {
-                push_uniq(def.scope.enclosed, d);
-            });
-        }
-        if (s === def.scope) break;
-        s = s.parent_scope;
-    }
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
 
 </div>
 
@@ -31453,12 +31525,12 @@ cname;this.enclosed = props.enclosed;this.parent_scope = props.parent_scope;this
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_default_mangler_options = function (options){
     return defaults(options, {
-        except      : [],
         eval        : false,
+        except      : [],
+        keep_fnames : false,
+        screw_ie8   : true,
         sort        : false, // Ignored. Flag retained for backwards compatibility.
         toplevel    : false,
-        screw_ie8   : true,
-        keep_fnames : false
     });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -31611,8 +31683,8 @@ cname;this.enclosed = props.enclosed;this.parent_scope = props.parent_scope;this
     <ul>
     <li>description and source-code<pre class="apidocCodePre">figure_out_scope = function (options){
     options = defaults(options, {
+        cache: null,
         screw_ie8: true,
-        cache: null
     });
 
     // pass 1: setup scope chaining and handle definitions
@@ -31624,15 +31696,14 @@ cname;this.enclosed = props.enclosed;this.parent_scope = props.parent_scope;this
         if (node instanceof AST_Catch) {
             var save_scope = scope;
             scope = new AST_Scope(node);
-            scope.init_scope_vars();
-            scope.parent_scope = save_scope;
+            scope.init_scope_vars(save_scope);
             descend();
             scope = save_scope;
             return true;
         }
         if (node instanceof AST_Scope) {
-            node.init_scope_vars();
-            var save_scope = node.parent_scope = scope;
+            node.init_scope_vars(scope);
+            var save_scope = scope;
             var save_defun = defun;
             var save_labels = labels;
             defun = scope = node;
@@ -31677,11 +31748,19 @@ cname;this.enclosed = props.enclosed;this.parent_scope = props.parent_scope;this
             (node.scope = defun.parent_scope).def_function(node);
         }
         else if (node instanceof AST_SymbolVar
-                 || node instanceof AST_SymbolConst) {
+            || node instanceof AST_SymbolConst) {
             defun.def_variable(node);
+            if (defun !== scope) {
+                node.mark_enclosed(options);
+                var def = scope.find_variable(node);
+                if (node.thedef !== def) {
+                    node.thedef = def;
+                    node.reference(options);
+                }
+            }
         }
         else if (node instanceof AST_SymbolCatch) {
-            scope.def_variable(node);
+            scope.def_variable(node).defun = defun;
         }
         else if (node instanceof AST_LabelRef) {
             var sym = labels.get(node.name);
@@ -31717,13 +31796,7 @@ cname;this.enclosed = props.enclosed;this.parent_scope = props.parent_scope;this
                     s.uses_eval = true;
                 }
             }
-            var sym = node.scope.find_variable(name);
-            if (node.scope instanceof AST_Lambda &#x26;&#x26; name == &#x22;arguments&#x22;) {
-                node.scope.uses_arguments = true;
-            }
-            if (!sym) {
-                sym = self.def_global(node);
-            } ...</pre></li>
+            var sym = node.scope.fi ...</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
 ```javascript
@@ -31838,12 +31911,12 @@ if (mangle) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">scope_warnings = function (options){
     options = defaults(options, {
-        undeclared       : false, // this makes a lot of noise
-        unreferenced     : true,
         assign_to_global : true,
+        eval             : true,
         func_arguments   : true,
         nested_defuns    : true,
-        eval             : true
+        undeclared       : false, // this makes a lot of noise
+        unreferenced     : true,
     });
     var tw = new TreeWalker(function(node){
         if (options.undeclared
@@ -32272,6 +32345,23 @@ for details.
 
 
     <h2>
+        <a href="#apidoc.element.uglify-js.AST_Try.prototype.has_side_effects" id="apidoc.element.uglify-js.AST_Try.prototype.has_side_effects">
+        function <span class="apidocSignatureSpan">uglify-js.AST_Try.prototype.</span>has_side_effects
+        <span class="apidocSignatureSpan">(compressor)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">has_side_effects = function (compressor){
+    return any(this.body, compressor)
+        || this.bcatch &#x26;&#x26; this.bcatch.has_side_effects(compressor)
+        || this.bfinally &#x26;&#x26; this.bfinally.has_side_effects(compressor);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
         <a href="#apidoc.element.uglify-js.AST_Try.prototype.optimize" id="apidoc.element.uglify-js.AST_Try.prototype.optimize">
         function <span class="apidocSignatureSpan">uglify-js.AST_Try.prototype.</span>optimize
         <span class="apidocSignatureSpan">(compressor)</span>
@@ -32505,26 +32595,19 @@ this.operator = props.operator;}}</pre></li>
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">drop_side_effect_free = function (compressor, first_in_statement){
-    switch (this.operator) {
-      case &#x22;delete&#x22;:
-      case &#x22;++&#x22;:
-      case &#x22;--&#x22;:
-        return this;
-      case &#x22;typeof&#x22;:
-        if (this.expression instanceof AST_SymbolRef) return null;
-      default:
-        var expression = this.expression.drop_side_effect_free(compressor, first_in_statement);
-        if (first_in_statement
-            &#x26;&#x26; this instanceof AST_UnaryPrefix
-            &#x26;&#x26; is_iife_call(expression)) {
-            if (expression === this.expression &#x26;&#x26; this.operator.length === 1) return this;
-            return make_node(AST_UnaryPrefix, this, {
-                operator: this.operator.length === 1 ? this.operator : &#x22;!&#x22;,
-                expression: expression
-            });
-        }
-        return expression;
+    if (unary_side_effects(this.operator)) return this;
+    if (this.operator == &#x22;typeof&#x22; &#x26;&#x26; this.expression instanceof AST_SymbolRef) return null;
+    var expression = this.expression.drop_side_effect_free(compressor, first_in_statement);
+    if (first_in_statement
+        &#x26;&#x26; this instanceof AST_UnaryPrefix
+        &#x26;&#x26; is_iife_call(expression)) {
+        if (expression === this.expression &#x26;&#x26; this.operator.length === 1) return this;
+        return make_node(AST_UnaryPrefix, this, {
+            operator: this.operator.length === 1 ? this.operator : &#x22;!&#x22;,
+            expression: expression
+        });
     }
+    return expression;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -32539,9 +32622,7 @@ this.operator = props.operator;}}</pre></li>
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">has_side_effects = function (compressor){
-    return this.operator == &#x22;delete&#x22;
-        || this.operator == &#x22;++&#x22;
-        || this.operator == &#x22;--&#x22;
+    return unary_side_effects(this.operator)
         || this.expression.has_side_effects(compressor);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -33070,38 +33151,6 @@ this.operator = props.operator;}}</pre></li>
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function AST_Undefined(props){ if (props) { this.end = props.end;this.start = props.start;}}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.uglify-js.AST_Undefined.prototype._codegen" id="apidoc.element.uglify-js.AST_Undefined.prototype._codegen">
-        function <span class="apidocSignatureSpan">uglify-js.AST_Undefined.prototype.</span>_codegen
-        <span class="apidocSignatureSpan">(self, output)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">_codegen = function (self, output){
-    output.print(&#x22;void 0&#x22;);
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.uglify-js.AST_Undefined.prototype.needs_parens" id="apidoc.element.uglify-js.AST_Undefined.prototype.needs_parens">
-        function <span class="apidocSignatureSpan">uglify-js.AST_Undefined.prototype.</span>needs_parens
-        <span class="apidocSignatureSpan">(output)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">needs_parens = function (output){
-    var p = output.parent();
-    return p instanceof AST_PropAccess &#x26;&#x26; p.expression === this
-        || p instanceof AST_Call &#x26;&#x26; p.expression === this;
-}</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -33798,42 +33847,44 @@ return ast.<span class="apidocCodeKeywordSpan">transform</span>(new TreeTransfor
         return new Compressor(options, false_by_default);
     TreeTransformer.call(this, this.before, this.after);
     this.options = defaults(options, {
-        sequences     : !false_by_default,
-        properties    : !false_by_default,
+        angular       : false,
+        booleans      : !false_by_default,
+        cascade       : !false_by_default,
+        collapse_vars : !false_by_default,
+        comparisons   : !false_by_default,
+        conditionals  : !false_by_default,
         dead_code     : !false_by_default,
+        drop_console  : false,
         drop_debugger : !false_by_default,
+        evaluate      : !false_by_default,
+        expression    : false,
+        global_defs   : {},
+        hoist_funs    : !false_by_default,
+        hoist_vars    : false,
+        if_return     : !false_by_default,
+        join_vars     : !false_by_default,
+        keep_fargs    : true,
+        keep_fnames   : false,
+        keep_infinity : false,
+        loops         : !false_by_default,
+        negate_iife   : !false_by_default,
+        passes        : 1,
+        properties    : !false_by_default,
+        pure_getters  : false,
+        pure_funcs    : null,
+        reduce_vars   : !false_by_default,
+        screw_ie8     : true,
+        sequences     : !false_by_default,
+        side_effects  : !false_by_default,
+        switches      : !false_by_default,
+        top_retain    : null,
+        toplevel      : !!(options &#x26;&#x26; options[&#x22;top_retain&#x22;]),
         unsafe        : false,
         unsafe_comps  : false,
         unsafe_math   : false,
         unsafe_proto  : false,
-        conditionals  : !false_by_default,
-        comparisons   : !false_by_default,
-        evaluate      : !false_by_default,
-        booleans      : !false_by_default,
-        loops         : !false_by_default,
         unused        : !false_by_default,
-        toplevel      : !!(options &#x26;&#x26; options[&#x22;top_retain&#x22;]),
-        top_retain    : null,
-        hoist_funs    : !false_by_default,
-        keep_fargs    : true,
-        keep_fnames   : false,
-        hoist_vars    : false,
-        if_return     : !false_by_default,
-        join_vars     : !false_by_default,
-        collapse_vars : !false_by_default,
-        reduce_vars   : !false_by_default,
-        cascade       : !false_by_default,
-        side_effects  : !false_by_default,
-        pure_getters  : false,
-        pure_funcs    : null,
-        negate_iife   : !false_by_default,
-        screw_ie8     : true,
-        drop_console  : false,
-        angular       : false,
-        expression    : false,
         warnings      : true,
-        global_defs   : {},
-        passes        : 1,
     }, true);
     var pure_funcs = this.options[&#x22;pure_funcs&#x22;];
     if (typeof pure_funcs == &#x22;function&#x22;) {
@@ -34595,9 +34646,14 @@ function merge(a, b) {
     }
     else if (!this.mangled_name &#x26;&#x26; !this.unmangleable(options)) {
         var s = this.scope;
-        if (!options.screw_ie8 &#x26;&#x26; this.orig[0] instanceof AST_SymbolLambda)
+        var sym = this.orig[0];
+        if (!options.screw_ie8 &#x26;&#x26; sym instanceof AST_SymbolLambda)
             s = s.parent_scope;
-        this.mangled_name = s.next_mangled(options, this);
+        var def;
+        if (this.defun &#x26;&#x26; (def = this.defun.variables.get(this.name))) {
+            this.mangled_name = def.mangled_name || def.name;
+        } else
+            this.mangled_name = s.next_mangled(options, this);
         if (this.global &#x26;&#x26; cache) {
             cache.set(this.name, this.mangled_name);
         }
