@@ -4,7 +4,7 @@
 <tspan x="10" y="26">2 megabytes installed</tspan>
 <tspan x="10" y="42"></tspan>
 <tspan x="10" y="58">node_modules</tspan>
-<tspan x="10" y="74">└─┬ uglify-js@2.8.21 </tspan>
+<tspan x="10" y="74">└─┬ uglify-js@2.8.22 </tspan>
 <tspan x="10" y="90">  ├── source-map@0.5.6 </tspan>
 <tspan x="10" y="106">  ├── uglify-to-browserify@1.0.2 </tspan>
 <tspan x="10" y="122">  └─┬ yargs@3.10.0 </tspan>
